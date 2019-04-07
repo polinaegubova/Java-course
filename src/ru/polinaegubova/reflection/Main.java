@@ -48,13 +48,20 @@ public class Main {
 
         long time5 = System.currentTimeMillis();
 
-        System.out.println("Start time for setter (ms): " + time1);
-        System.out.println("Time after setValue (ms): " + time2);
-        System.out.println("Time after reflection (ms): " + time3);
+        System.out.println("setValue takes (ms): " + (time2 - time1));
+        System.out.println("reflection takes (ms): " + (time3 - time2));
         System.out.println();
-        System.out.println("Start time for method (ms): " + time3);
-        System.out.println("Time after execute metod (ms): " + time4);
-        System.out.println("Time after reflection (ms): " + time5);
-
+        System.out.println("execute metod takes (ms): " + (time4 - time3));
+        System.out.println("method reflection takes (ms): " + (time5 - time4));
     }
 }
+
+/*
+output data
+
+setValue takes (ms): 7
+reflection takes (ms): 10
+
+execute metod takes (ms): 13
+method reflection takes (ms): 16
+*/
